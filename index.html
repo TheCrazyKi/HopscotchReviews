@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+
+<head>
+  <title>
+    Hopscotch Reviews by waffle
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An unofficial site that contains reviews of Hopscotch projects">
+  <meta name="keywords" content="hopscotch, gethopscotch, hopscotch reviews, hs reviews, arcade grounds, arcadegrounds, hs-reviews, waffle11">
+  <meta property="og:title" content="Hopscotch Reviews">
+  <meta property="og:description" content="An unofficial site that contains reviews of Hopscotch projects.">
+  <link rel="icon" href="images/icon.png">
+  <link property="og:image" href="images/icon.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="images/icon.png">
+  <link rel="stylesheet" href="https://wafflestuff.vercel.app/cantarell/style.css">
+</head>
+
+<body>
+  <input aria-hidden="true" style="border: none; outline: none; box-shadow: none; background: transparent; position: fixed; left: 0; top: 0" type="text" id="cpt" readonly>
+  <div id="pickchannel"><span id="searchBtn" onclick="searchp();" tabindex="2" aria-label="Search Projects"><i class="fa fa-search"></i></span><span><a data-path="reviewed" tabindex="2" onclick="event.preventDefault(); getProjects('reviewed');" href="?channel=reviewed" id="ch_reviewed">Reviewed</a></span></div>
+  <div id="descr" style="margin-top: 4.8em; text-align: center; color: #3a3a3a; padding: 0 1.3em"></div>
+  <div id="projectsList">
+  </div>
+  <div class="fx">
+    <div id="popup"></div>
+  </div>
+  <div class="fx">
+    <form id="searchp" role="search">
+      <div style="font-size: 1.3em;"><i title="Close" role="button" class="fa fa-times" onclick="opene(false, 1); document.body.style.overflow = 'initial'; document.querySelector('#searchres').innerHTML = ''; document.querySelector('#searc').value = '';"></i><label for="searc" style="text-align: center; display: inline-block; width: 95%; font-weight: 800">Search Projects</label></div>
+      <div style="text-align: right;"><input id="searc" type="search" required></div>
+      <div><button type="submit" style="width: 100%; padding: .6em; border: solid 3px #fff; border-radius: 8px; background-color: transparent; font-weight: bold"><i class="fa fa-search"></i> Search</button></div>
+      <div id="searchres"></div>
+    </form>
+  </div>
+  <div class="fx" style="z-index: 4000">
+    <div id="rpdialog">
+      <div>
+        <h2 style="margin: 5px 0; font-weight: 800">Flag project</h2>
+        <select id="rp">
+          <option value="Being mean">Being mean</option>
+          <option value="Inappropriate content">Inappropriate content</option>
+          <option value="Sharing Personal information">Sharing personal information</option>
+          <option value="Bad words">Bad words</option>
+        </select><br /><button style="color: #fff; background-color: #0f6fff; border: none; outline: none; padding: 7px 10px; border-radius: 6px; margin: 8px;" onclick="opene(false, 2);">Cancel</button><button style="font-weight: 800; color: #fff; background-color: #ef381c; border: none; outline: none; padding: 7px 10px; border-radius: 6px;">Flag project</button>
+      </div>
+    </div>
+  </div>
+  <div class="fx">
+    <div id="pplayer">
+      <div><i class="fa fa-times" style="margin-bottom: 8px"></i></div><iframe></iframe>
+    </div>
+  </div>
+  <div class="fx" aria-hidden="true">
+    <div style="background-color: #B1B2B4; padding: 1em; border-radius: 6px; font-size: 2em; color: #606060; animation: open .4s"><i class="fa fa-spinner fa-pulse"></i></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</HTML>

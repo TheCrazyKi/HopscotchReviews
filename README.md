@@ -1,1 +1,1 @@
-# HopscotchReviews
+The site is [here](https://t7260.gitlab.io/hs-reviews)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>the most useless thing in existence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  <script src="./main.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+</head>
+<body>
+  <div id="o">
+    <div style="font-size: 1.7em; margin: 8px 0; background: linear-gradient(to right, #c217ed, #ed17bb); color: #fff; padding: 8px; border-radius: 8px"><b>Submit a project</b></div>
+    <div><input id="uin" onfocus="foc()" type="text" placeholder="UUID" style="width: calc(100% - 70px)"><span id="sub" onclick="submit()" style="display: inline-block; margin-left: 10px; padding: 6px; border-radius: 8px; color: #fff; background: linear-gradient(to right, #ab1cff, #e41cff)"><i class="las la-arrow-right" style="font-size: 1.6em"></i></span></div>
+    <div style="color: grey; margin-top: 1em">The data will be automatically updated every 24 hours.</div>
+    <hr />
+    <div id="subp" style="display: none;">
+      <div id="et" style="font-size: 1.2em; margin-bottom: 6px"><b>Checking...</b></div>
+      <progress id="prog" max="3" value="0"></progress>
+      <div id="ed" style="font-size: .8em; margin-top: 6px"></div>
+    </div>
+  </div>
+  <div id="t">
+    <div style="font-size: 1.7em; margin: 8px 0; background: linear-gradient(to right, #c217ed, #ed17bb); color: #fff; padding: 8px; border-radius: 8px"><b>View data</b></div>
+    <div><input id="uit" onfocus="foc()" type="text" placeholder="UUID" style="width: calc(100% - 70px)"><span id="get" onclick="data()" style="display: inline-block; margin-left: 10px; padding: 6px; border-radius: 8px; color: #fff; background: linear-gradient(to right, #ab1cff, #e41cff)"><i class="las la-arrow-right" style="font-size: 1.6em"></i></span></div>
+    <div style="margin-top: 1em;"><hr />
+    <div id="data">
+    </div>
+    </div>
+    <div style="color: grey">Also, the data may be inaccurate (most likely because of the math on the client side) — but hopefully they are all accurate :)</div>
+  </div>
+</body>
+</html>

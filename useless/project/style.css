@@ -1,0 +1,104 @@
+@keyframes ex {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+}
+
+@keyframes en {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #882bf2;
+  padding: 10px;
+  font-family: -apple-system, 'Inter', sans-serif;
+}
+
+#o,
+#t,
+#h {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  margin-top: 1em;
+}
+
+@media (min-width: 700px) {
+  #o,
+  #t,
+  #h {
+    margin-left: 1em;
+    width: 60%;
+    max-width: 390px;
+    height: max-content;
+  }
+}
+
+input {
+  transition: border-color .3s;
+  padding: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  font-family: inherit;
+  outline: none;
+  border: solid 3px #591faf;
+}
+
+input:focus {
+  border-color: #d31dac;
+}
+
+.las {
+  vertical-align: middle;
+}
+
+hr {
+  border: none;
+  height: 4px;
+  background: linear-gradient(to right, #c217ed, #ed17bb);
+  border-radius: 5px;
+}
+
+progress {
+  border: 0;
+  height: 1em;
+  border-radius: 20px;
+  width: 100%;
+}
+
+progress::-webkit-progress-bar {
+  border: 0;
+  height: 1em;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+progress::-webkit-progress-value {
+  border: 0;
+  height: 1em;
+  border-radius: 20px;
+  background: linear-gradient(to right, #c217ed, #ed17bb);
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(to right, #c217ed, #ed17bb);
+  border: 0;
+  height: 1em;
+  border-radius: 20px;
+}
